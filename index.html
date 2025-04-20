@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Monsieur Thé - Découvrez nos délicieux produits laitiers traditionnels et bubble teas artisanaux à Lomé, Togo. Qualité, tradition et innovation dans chaque tasse.">
+    <meta name="keywords" content="bubble tea, produits laitiers, thé, yaourt, fromage, Lomé, Togo">
+    <meta name="author" content="Monsieur Thé">
+    <meta name="theme-color" content="#ffd9e3">
+    <title>Monsieur Thé - Produits Laitiers & Bubble Tea | Lomé, Togo</title>
+    
+    <!-- Préchargement des ressources critiques -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Polices élégantes -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+    <!-- Bouton de retour en haut -->
+    <button id="back-to-top" aria-label="Retour en haut de la page" class="bg-white shadow-lg rounded-full flex items-center justify-center text-color-accent">
+        <i class="fas fa-chevron-up text-xl"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md transition-all duration-300 sticky top-0 z-50" id="navbar">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo et nom de l'entreprise -->
+                <div class="flex items-center">
+                    <img src="Images/Thé.png" alt="Logo Monsieur Thé" class="h-20 w-20 object-contain" width="100" height="100">
+                    <div class="ml-4">
+                        <span class="text-lg font-bold text-gray-800 block">Monsieur Thé</span>
+                        <span class="text-sm text-neutral-gray italic">La nouvelle boisson, la nouvelle passion !</span>
+                    </div>
+                </div>
+                
+                <!-- Navigation pour ordinateur -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#accueil" class="nav-link py-2 text-gray-700 hover:text-accent-orange flex items-center">
+                        <i class="fas fa-home text-lg mr-2" aria-hidden="true"></i>Accueil
+                    </a>
+                    <a href="#produits" class="nav-link py-2 text-gray-700 hover:text-accent-orange flex items-center">
+                        <i class="fas fa-shopping-bag text-lg mr-2" aria-hidden="true"></i>Nos Produits
+                    </a>
+                    <a href="#a-propos" class="nav-link py-2 text-gray-700 hover:text-accent-orange flex items-center">
+                        <i class="fas fa-info-circle text-lg mr-2" aria-hidden="true"></i>À Propos
+                    </a>
+                    <a href="#emplacements" class="nav-link py-2 text-gray-700 hover:text-accent-orange flex items-center">
+                        <i class="fas fa-map-marker-alt text-lg mr-2" aria-hidden="true"></i>Emplacements
+                    </a>
+                    <a href="#carrieres" class="nav-link py-2 text-gray-700 hover:text-accent-orange flex items-center">
+                        <i class="fas fa-briefcase text-lg mr-2" aria-hidden="true"></i>Carrières
+                    </a>                     
+                    <a href="#contact" class="nav-link py-2 text-gray-700 hover:text-accent-orange flex items-center">
+                        <i class="fas fa-envelope text-lg mr-2" aria-hidden="true"></i>Contact
+                    </a>
+                </div>
+                
+                <!-- Bouton du menu mobile -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-700 focus:outline-none" aria-label="Menu">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Menu mobile - caché par défaut -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4">
+                <div class="flex flex-col space-y-3 pb-3">
+                    <a href="#accueil" class="py-2 text-gray-700 hover:text-accent-orange flex items-center">
+                        <i class="fas fa-home text-lg mr-2" aria-hidden="true"></i>Accueil
+                    </a>
+                    <a href="#produits" class="py-2 text-gray-700 hover:text-accent-orange flex items-center">
+                        <i class="fas fa-shopping-bag text-lg mr-2" aria-hidden="true"></i>Nos Produits
+                    </a>
+                    <a href="#emplacements" class="py-2 text-gray-700 hover:text-accent-orange flex items-center">
+                        <i class="fas fa-map-marker-alt text-lg mr-2" aria-hidden="true"></i>Emplacements
+                    </a>
+                    <a href="#carrieres" class="py-2 text-gray-700 hover:text-accent-orange flex items-center">
+                        <i class="fas fa-briefcase text-lg mr-2" aria-hidden="true"></i>Carrières
+                    </a>
+                    <a href="#a-propos" class="py-2 text-gray-700 hover:text-accent-orange flex items-center">
+                        <i class="fas fa-info-circle text-lg mr-2" aria-hidden="true"></i>À Propos
+                    </a>
+                    <a href="#contact" class="py-2 text-gray-700 hover:text-accent-orange flex items-center">
+                        <i class="fas fa-envelope text-lg mr-2" aria-hidden="true"></i>Contact
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Accueil -->
+    <section id="accueil" class="bubble-section">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-dark-text">Bienvenue chez Monsieur Thé</h1>
+                    <p class="text-lg md:text-xl mb-8 text-neutral-gray">Découvrez nos délicieux produits laitiers traditionnels et nos bubble teas innovants, préparés avec passion.</p>
+                    <div class="flex space-x-4">
+                        <a href="#produits" class="bubble-btn rounded-full font-semibold text-dark-text flex items-center">
+                            <i class="fas fa-shopping-bag mr-2" aria-hidden="true"></i>Nos Produits
+                        </a>
+                        <a href="#contact" class="bg-white px-6 py-3 rounded-full font-semibold text-dark-text border border-bubble-pink hover:bg-accent-orange hover:text-white transition-colors duration-300 flex items-center">
+                            <i class="fas fa-envelope mr-2" aria-hidden="true"></i>Contactez-nous
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="Images/photo-shoot_1740907460268 (1).jpg" alt="Produits Monsieur Thé" class="rounded-3xl shadow-lg w-full" width="600" height="400" loading="eager">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section Produits -->
+    <section id="produits" class="dairy-section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 flex items-center justify-center">
+                <i class="fas fa-mug-hot text-3xl section-icon" aria-hidden="true"></i>Nos Produits
+            </h2>
+            
+            <!-- Produits laitiers -->
+            <div class="mb-16">
+                <h3 class="text-2xl md:text-3xl font-semibold text-center mb-8 flex items-center justify-center">
+                    <i class="fas fa-cheese text-2xl section-icon" aria-hidden="true"></i>Produits Laitiers Traditionnels
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Carte Produit 1 -->
+                    <div class="tea-card bg-white shadow-lg">
+                        <img src="Images/yogurt.jpg" alt="Yaourt Artisanal" class="w-full" width="400" height="250" loading="lazy">
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold mb-2 flex items-center">
+                                <i class="fas fa-yogurt text-lg section-icon" aria-hidden="true"></i>Yaourt Artisanal
+                            </h4>
+                            <p class="text-neutral-gray mb-4">Notre yaourt artisanal préparé selon une recette traditionnelle. Doux, crémeux et riche en saveurs.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-lg font-bold text-accent-orange">2296 FCFA</span>
+                                <button class="bubble-btn rounded-full text-sm flex items-center" aria-label="Découvrir le yaourt artisanal">
+                                    <i class="fas fa-eye mr-2" aria-hidden="true"></i>Découvrir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Carte Produit 2 -->
+                    <div class="tea-card bg-white shadow-lg">
+                        <img src="Images/cheese.jpg" alt="Fromage Blanc" class="w-full" width="400" height="250" loading="lazy">
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold mb-2 flex items-center">
+                                <i class="fas fa-cheese text-lg section-icon" aria-hidden="true"></i>Fromage Blanc
+                            </h4>
+                            <p class="text-neutral-gray mb-4">Un fromage blanc onctueux et léger, parfait pour le petit-déjeuner ou en dessert avec des fruits frais.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-lg font-bold text-accent-orange">2755 FCFA</span>
+                                <button class="bubble-btn rounded-full text-sm flex items-center" aria-label="Découvrir le fromage blanc">
+                                    <i class="fas fa-eye mr-2" aria-hidden="true"></i>Découvrir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Carte Produit 3 -->
+                    <div class="tea-card bg-white shadow-lg">
+                        <img src="Images/cream.jpg" alt="Crème Fraîche" class="w-full" width="400" height="250" loading="lazy">
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold mb-2 flex items-center">
+                                <i class="fas fa-cream text-lg section-icon" aria-hidden="true"></i>Crème Fraîche
+                            </h4>
+                            <p class="text-neutral-gray mb-4">Notre crème fraîche épaisse et veloutée, idéale pour la cuisine ou pour accompagner vos desserts.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-lg font-bold text-accent-orange">2493 FCFA</span>
+                                <button class="bubble-btn rounded-full text-sm flex items-center" aria-label="Découvrir la crème fraîche">
+                                    <i class="fas fa-eye mr-2" aria-hidden="true"></i>Découvrir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bubble Tea -->
+            <div>
+                <h3 class="text-2xl md:text-3xl font-semibold text-center mb-8 flex items-center justify-center">
+                    <i class="fas fa-coffee text-2xl section-icon" aria-hidden="true"></i>Bubble Tea
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Carte Bubble Tea 1 -->
+                    <div class="tea-card bg-white shadow-lg">
+                        <img src="Images/matcha.jpg" alt="Matcha Latte Bubble Tea" class="w-full" width="400" height="250" loading="lazy">
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold mb-2 flex items-center">
+                                <i class="fas fa-tea text-lg section-icon" aria-hidden="true"></i>Matcha Latte Bubble Tea
+                            </h4>
+                            <p class="text-neutral-gray mb-4">Un délicieux mélange de thé matcha et de lait, avec des perles de tapioca au fond.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-lg font-bold text-accent-orange">3870 FCFA</span>
+                                <button class="bubble-btn rounded-full text-sm flex items-center" aria-label="Commander le Matcha Latte Bubble Tea">
+                                    <i class="fas fa-cart-plus mr-2 animated-icon" aria-hidden="true"></i>Commander
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Carte Bubble Tea 2 -->
+                    <div class="tea-card bg-white shadow-lg">
+                        <img src="Images/taro.jpg" alt="Taro Milk Tea" class="w-full" width="400" height="250" loading="lazy">
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold mb-2 flex items-center">
+                                <i class="fas fa-tea text-lg section-icon" aria-hidden="true"></i>Taro Milk Tea
+                            </h4>
+                            <p class="text-neutral-gray mb-4">Une boisson sucrée à base de taro, avec un goût unique et une belle couleur violette.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-lg font-bold text-accent-orange">3608 FCFA</span>
+                                <button class="bubble-btn rounded-full text-sm flex items-center" aria-label="Commander le Taro Milk Tea">
+                                    <i class="fas fa-cart-plus mr-2 animated-icon" aria-hidden="true"></i>Commander
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Carte Bubble Tea 3 -->
+                    <div class="tea-card bg-white shadow-lg">
+                        <img src="Images/fruit-tea.jpg" alt="Fruit Tea" class="w-full" width="400" height="250" loading="lazy">
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold mb-2 flex items-center">
+                                <i class="fas fa-lemon text-lg section-icon" aria-hidden="true"></i>Fruit Tea
+                            </h4>
+                            <p class="text-neutral-gray mb-4">Un thé infusé aux fruits frais de saison, agrémenté de perles de fruit éclatantes en bouche.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-lg font-bold text-accent-orange">3411 FCFA</span>
+                                <button class="bubble-btn rounded-full text-sm flex items-center" aria-label="Commander le Fruit Tea">
+                                    <i class="fas fa-cart-plus mr-2 animated-icon" aria-hidden="true"></i>Commander
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Section À propos -->
+    <section id="a-propos" class="about-section">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 flex items-center justify-center">
+                    <i class="fas fa-book-open text-3xl section-icon" aria-hidden="true"></i>Notre Histoire
+                </h2>
+                
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
+                    <div class="md:flex">
+                        <div class="md:w-1/2">
+                            <img src="Images/Thé.png" alt="Histoire de Monsieur Thé" class="w-full h-full object-cover" width="400" height="400" loading="lazy">
+                        </div>
+                        <div class="md:w-1/2 p-8">
+                            <h3 class="text-2xl font-semibold mb-4 flex items-center">
+                                <i class="fas fa-seedling text-xl section-icon" aria-hidden="true"></i>De la tradition à l'innovation
+                            </h3>
+                            <p class="text-neutral-gray mb-4">
+                                Fondée en 2010 par Jean-Marc Kouassi, Monsieur Thé est née d'une vision simple : créer des produits laitiers de qualité supérieure et des boissons innovantes qui célèbrent les traditions tout en embrassant les tendances modernes.
+                            </p>
+                            <p class="text-neutral-gray mb-6">
+                                Notre voyage a commencé avec quelques recettes familiales de yaourts et fromages, mais a rapidement évolué lorsque nous avons découvert la culture du bubble tea. Aujourd'hui, nous sommes fiers d'être le premier établissement à Lomé à proposer ces deux univers sous un même toit.
+                            </p>
+                            <p class="text-neutral-gray">
+                                Chez Monsieur Thé, nous croyons que la qualité ne doit jamais être compromise. C'est pourquoi nous utilisons uniquement des ingrédients frais et locaux pour nos produits laitiers, et des thés de première qualité pour nos bubble teas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Emplacements -->
+    <section id="emplacements" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 flex items-center justify-center">
+                <i class="fas fa-map-marker-alt text-3xl section-icon" aria-hidden="true"></i>Nos Emplacements
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Emplacement 1 -->
+                <div class="tea-card bg-white shadow-lg overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-3 flex items-center">
+                            <i class="fas fa-store text-xl section-icon" aria-hidden="true"></i>Magasin Principal
+                        </h3>
+                        <p class="text-neutral-gray mb-4">Adresse complète : 78 Rue du Commerce, Centre-ville, Lomé, Togo</p>
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-phone form-icon" aria-hidden="true"></i>
+                            <a href="tel:+22890123456" class="text-neutral-gray hover:text-accent-orange transition-colors duration-300">+228 90 12 34 56</a>
+                        </div>
+                        <div class="flex items-center mb-5">
+                            <i class="fas fa-clock form-icon" aria-hidden="true"></i>
+                            <span class="text-neutral-gray">Lun-Sam: 8h-20h | Dim: 9h-17h</span>
+                        </div>
+                        <div class="map-container bg-gray-200 relative">
+                            <img src="/api/placeholder/600/300" alt="Carte du magasin principal" class="w-full h-full object-cover" width="600" height="300" loading="lazy">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span class="bg-white px-4 py-2 rounded-full shadow-md">
+                                    <i class="fas fa-map-pin text-accent-orange mr-2" aria-hidden="true"></i>Magasin Principal
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Emplacement 2 -->
+                <div class="tea-card bg-white shadow-lg overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-3 flex items-center">
+                            <i class="fas fa-store-alt text-xl section-icon" aria-hidden="true"></i>Comptoir Bubble Tea - Campus
+                        </h3>
+                        <p class="text-neutral-gray mb-4">Adresse complète : Université de Lomé, Route de l'Aéroport, Lomé, Togo</p>
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-phone form-icon" aria-hidden="true"></i>
+                            <a href="tel:+22891234567" class="text-neutral-gray hover:text-accent-orange transition-colors duration-300">+228 91 23 45 67</a>
+                        </div>
+                        <div class="flex items-center mb-5">
+                            <i class="fas fa-clock form-icon" aria-hidden="true"></i>
+                            <span class="text-neutral-gray">Lun-Ven: 7h30-18h | Sam: 8h-14h</span>
+                        </div>
+                        <div class="map-container bg-gray-200 relative">
+                            <img src="/api/placeholder/600/300" alt="Carte du comptoir campus" class="w-full h-full object-cover" width="600" height="300" loading="lazy">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span class="bg-white px-4 py-2 rounded-full shadow-md">
+                                    <i class="fas fa-map-pin text-accent-orange mr-2" aria-hidden="true"></i>Comptoir Campus
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Carrières -->
+    <section id="carrieres" class="bubble-section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 flex items-center justify-center">
+                <i class="fas fa-briefcase text-3xl section-icon" aria-hidden="true"></i>Rejoignez Notre Équipe
+            </h2>
+
+            <div class="max-w-3xl mx-auto bg-white rounded-3xl shadow-lg p-8">
+                <p class="text-lg text-neutral-gray mb-8 text-center">
+                    Vous êtes passionné(e) par la qualité et le service client ? Rejoignez l'équipe de Monsieur Thé et participez à notre aventure gourmande !
+                </p>
+
+                <div class="mb-8">
+                    <h3 class="text-2xl font-semibold mb-4 flex items-center">
+                        <i class="fas fa-users text-xl section-icon" aria-hidden="true"></i>Pourquoi nous rejoindre ?
+                    </h3>
+                    <ul class="space-y-3 text-neutral-gray">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-accent-orange mt-1 mr-3" aria-hidden="true"></i>
+                            <span>Un environnement de travail dynamique et convivial</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-accent-orange mt-1 mr-3" aria-hidden="true"></i>
+                            <span>Des opportunités de formation et d'évolution</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-accent-orange mt-1 mr-3" aria-hidden="true"></i>
+                            <span>Des avantages employés attractifs</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-accent-orange mt-1 mr-3" aria-hidden="true"></i>
+                            <span>Une entreprise locale en pleine croissance</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-2xl font-semibold mb-4 flex items-center">
+                        <i class="fas fa-bullseye text-xl section-icon" aria-hidden="true"></i>Postes disponibles
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-gray-50 p-4 rounded-lg job-btn" onclick="applyForJob('Barista Bubble Tea')" role="button" aria-label="Postuler pour Barista Bubble Tea">
+                            <h4 class="font-semibold mb-2 flex items-center">
+                                <i class="fas fa-mug-hot text-accent-orange mr-2" aria-hidden="true"></i>Barista Bubble Tea
+                            </h4>
+                            <p class="text-sm text-neutral-gray">Temps plein ou partiel. Expérience en service client requise.</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg job-btn" onclick="applyForJob('Assistant de Production')" role="button" aria-label="Postuler pour Assistant de Production">
+                            <h4 class="font-semibold mb-2 flex items-center">
+                                <i class="fas fa-cheese text-accent-orange mr-2" aria-hidden="true"></i>Assistant de Production
+                            </h4>
+                            <p class="text-sm text-neutral-gray">Temps plein. Formation en production alimentaire souhaitée.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <a href="#contact" class="bubble-btn rounded-full font-semibold inline-flex items-center">
+                        <i class="fas fa-paper-plane mr-2" aria-hidden="true"></i>Postuler Maintenant
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 flex items-center justify-center">
+                <i class="fas fa-envelope text-3xl section-icon" aria-hidden="true"></i>Contactez-nous
+            </h2>
+
+            <div class="max-w-5xl mx-auto">
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
+                    <div class="md:flex">
+                        <!-- Informations de contact -->
+                        <div class="md:w-2/5 bg-gradient-to-br from-primary to-secondary p-8 text-dark-text">
+                            <h3 class="text-2xl font-semibold mb-6">Restons en contact</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <i class="fas fa-map-marker-alt mt-1 form-icon" aria-hidden="true"></i>
+                                    <div>
+                                        <h4 class="font-semibold">Adresse</h4>
+                                        <p>78 Rue du Commerce, Lomé, Togo</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-phone-alt mt-1 form-icon" aria-hidden="true"></i>
+                                    <div>
+                                        <h4 class="font-semibold">Téléphone</h4>
+                                        <a href="tel:+22890123456" class="hover:text-accent-orange transition-colors duration-300">+228 90 12 34 56</a>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-envelope mt-1 form-icon" aria-hidden="true"></i>
+                                    <div>
+                                        <h4 class="font-semibold">Email</h4>
+                                        <a href="/cdn-cgi/l/email-protection#66454948524745662b4948554f4353540b524e43085241" class="hover:text-accent-orange transition-colors duration-300"><span class="__cf_email__" data-cfemail="2745080913060413674a0809140e0212154a130f02491300">[email protected]</span></a>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-clock mt-1 form-icon" aria-hidden="true"></i>
+                                    <div>
+                                        <h4 class="font-semibold">Heures d'ouverture</h4>
+                                        <p>Lun-Sam: 8h-20h | Dim: 9h-17h</p>
+                                    </div>
+                                </div>
+                            </div>                             
+                        </div>
+
+                        <!-- Formulaire de contact -->
+                        <div class="md:w-3/5 p-8">
+                            <h3 class="text-2xl font-semibold mb-6">Envoyez-nous un message</h3>
+                            <form id="contact-form" class="space-y-6" novalidate>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label for="name" class="block text-sm font-medium text-neutral-gray mb-2">Nom complet <span class="text-red-500">*</span></label>
+                                        <div class="relative">
+                                            <span class="absolute left-3 top-3 text-gray-400">
+                                                <i class="fas fa-user" aria-hidden="true"></i>
+                                            </span>
+                                            <input type="text" id="name" name="name" class="w-full bg-gray-100 border-0 rounded-lg py-3 px-10 focus:ring-2 focus:ring-accent-orange" required>
+                                            <span class="form-error">Veuillez entrer votre nom.</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label for="email" class="block text-sm font-medium text-neutral-gray mb-2">Email <span class="text-red-500">*</span></label>
+                                        <div class="relative">
+                                            <span class="absolute left-3 top-3 text-gray-400">
+                                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                                            </span>
+                                            <input type="email" id="email" name="email" class="w-full bg-gray-100 border-0 rounded-lg py-3 px-10 focus:ring-2 focus:ring-accent-orange" required>
+                                            <span class="form-error">Veuillez entrer une adresse email valide.</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="subject" class="block text-sm font-medium text-neutral-gray mb-2">Sujet <span class="text-red-500">*</span></label>
+                                    <div class="relative">
+                                        <span class="absolute left-3 top-3 text-gray-400">
+                                            <i class="fas fa-tag" aria-hidden="true"></i>
+                                        </span>
+                                        <input type="text" id="subject" name="subject" class="w-full bg-gray-100 border-0 rounded-lg py-3 px-10 focus:ring-2 focus:ring-accent-orange" required>
+                                        <span class="form-error">Veuillez entrer un sujet.</span>
+                                        </div>
+                                </div>
+
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-neutral-gray mb-2">Message <span class="text-red-500">*</span></label>
+                                    <div class="relative">
+                                        <span class="absolute left-3 top-3 text-gray-400">
+                                            <i class="fas fa-comment-alt" aria-hidden="true"></i>
+                                        </span>
+                                        <textarea id="message" name="message" rows="5" class="w-full bg-gray-100 border-0 rounded-lg py-3 px-10 focus:ring-2 focus:ring-accent-orange" required></textarea>
+                                        <span class="form-error">Veuillez entrer un message.</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center">
+                                    <input type="checkbox" id="consent" name="consent" class="rounded text-accent-orange focus:ring-accent-orange mr-3" required>
+                                    <label for="consent" class="text-sm text-neutral-gray">J'accepte que mes données soient traitées conformément à la politique de confidentialité. <span class="text-red-500">*</span></label>
+                                    <span class="form-error ml-2">Veuillez accepter les conditions.</span>
+                                </div>
+
+                                <div>
+                                    <button type="submit" class="bubble-btn rounded-full font-semibold inline-flex items-center">
+                                        <i class="fas fa-paper-plane mr-2 animated-icon" aria-hidden="true"></i>Envoyer Message
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <canvas id="bubble-canvas" aria-hidden="true"></canvas>
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <!-- Logo et description -->
+                <div class="md:col-span-1">
+                    <img src="Images/Thé.png" alt="Logo Monsieur Thé" class="h-24 mb-4" width="100" height="100">
+                    <p class="text-sm">La nouvelle boisson, la nouvelle passion ! Produits laitiers traditionnels et bubble teas innovants à Lomé, Togo.</p>
+                </div>
+
+                <!-- Liens rapides -->
+                <div>
+                    <h4>Liens Rapides</h4>
+                    <ul class=" uniform-list">
+                        <li><a href="#accueil" class="transition-all duration-300">Accueil</a></li>
+                        <li><a href="#produits" class="transition-all duration-300">Nos Produits</a></li>
+                        <li><a href="#a-propos" class="transition-all duration-300">À Propos</a></li>
+                        <li><a href="#contact" class="transition-all duration-300">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contacts -->
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-accent-orange mr-3" aria-hidden="true"></i>
+                            <span>78 Rue du Commerce, Lomé, Togo</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-accent-orange mr-3" aria-hidden="true"></i>
+                            <a href="tel:+22890123456" class="transition-all duration-300">+228 90 12 34 56</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-accent-orange mr-3" aria-hidden="true"></i>
+                            <a href="/cdn-cgi/l/email-protection#aecdc1c0dacfcddaeec3c1c0ddc7cbdbdc83dac6cb80dac9" class="transition-all duration-300"><span class="__cf_email__" data-cfemail="2745080913060413674a0809140e0212154a130f02491300">[email protected]</span></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h4>Newsletter</h4>
+                    <p class="text-sm mb-4">Inscrivez-vous pour recevoir nos actualités et offres spéciales.</p>
+                    <form class="newsletter-form flex">
+                        <input type="email" placeholder="Votre email" class="rounded-l-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-accent-orange" required>
+                        <button type="submit" class="rounded-r-lg" aria-label="S'abonner">
+                            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                    <div class="mt-6">
+                        <h5 class="font-semibold mb-3">Suivez-nous</h5>
+                        <div class="flex space-x-4">
+                            <a href="#" class="social-icon" aria-label="Facebook">
+                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="Instagram">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" class="social-icon" aria-label="Twitter">
+                                <i class="fab fa-twitter" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-bar flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm">© 2025 Monsieur Thé. Tous droits réservés.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="transition-all duration-300">Politique de confidentialité</a>
+                    <a href="#" class="transition-all duration-300">Conditions d'utilisation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="JS/script.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'932eb0614a99bd54',t:'MTc0NTA4OTY4OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
