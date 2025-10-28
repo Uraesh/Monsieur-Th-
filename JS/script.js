@@ -116,6 +116,21 @@ document.addEventListener('DOMContentLoaded', () => {
     setActiveLinkAndNavbarColor();
     window.addEventListener('scroll', setActiveLinkAndNavbarColor);
 
+    // Section animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
     // Footer bubble animation
     function resizeCanvas() {
         canvas.width = window.innerWidth;
