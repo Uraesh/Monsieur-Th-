@@ -113,8 +113,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    setActiveLinkAndNavbarColor();
-    window.addEventListener('scroll', setActiveLinkAndNavbarColor);
+    // Throttle function
+    const throttle = (func, limit) => {
+        let inThrottle;
+        return function() {
+            const args = arguments;
+            const context = this;
+            if (!inThrottle) {
+                func.apply(context, args);
+                inThrottle = true;
+                setTimeout(() => inThrottle = false, limit);
+            }
+        }
+    };
+
+    const throttledSetActiveLinkAndNavbarColor = throttle(setActiveLinkAndNavbarColor, 200);
+    window.addEventListener('scroll', throttledSetActiveLinkAndNavbarColor);
 
     // Section animations
     const observer = new IntersectionObserver((entries) => {
