@@ -24,6 +24,17 @@ body {
     line-height: 1.6;
 }
 
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
 }
@@ -91,7 +102,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-link {
     position: relative;
     transition: all var(--transition-speed) ease;
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding-bottom: 0.5rem;
 }
 

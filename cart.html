@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier - Monsieur Thé</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+    <nav class="bg-white shadow-md transition-all duration-300 sticky top-0 z-50" id="navbar">
+        <div class="container mx-auto px-4 py-2">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="index.html">
+                        <img src="Images/Thé.png" alt="Logo Monsieur Thé" class="h-12 w-12 object-contain" width="60" height="60">
+                    </a>
+                    <div class="ml-3">
+                        <span class="text-md font-bold text-gray-800 block">Monsieur Thé</span>
+                        <span class="text-sm text-neutral-gray italic">La nouvelle boisson, la nouvelle passion !</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#accueil" class="nav-link py-2 text-gray-700 hover:text-accent-orange flex items-center">
+                        <i class="fas fa-home text-lg mr-2" aria-hidden="true"></i>Accueil
+                    </a>
+                    <a href="index.html#produits" class="nav-link py-2 text-gray-700 hover:text-accent-orange flex items-center">
+                        <i class="fas fa-shopping-bag text-lg mr-2" aria-hidden="true"></i>Nos Produits
+                    </a>
+                    <a href="index.html#a-propos" class="nav-link py-2 text-gray-700 hover:text-accent-orange flex items-center">
+                        <i class="fas fa-info-circle text-lg mr-2" aria-hidden="true"></i>À Propos
+                    </a>
+                    <a href="cart.html" class="nav-link py-2 text-gray-700 hover:text-accent-orange flex items-center">
+                        <i class="fas fa-shopping-cart text-lg mr-2" aria-hidden="true"></i>Panier (<span id="cart-count">0</span>)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-16">
+        <h1 class="text-3xl font-bold mb-8">Votre Panier</h1>
+        <div id="cart-items" class="grid grid-cols-1 gap-8">
+            <!-- Cart items will be loaded here by JavaScript -->
+        </div>
+        <div class="mt-8 text-right">
+            <p class="text-2xl font-bold">Total: <span id="cart-total">0 FCFA</span></p>
+            <button class="bubble-btn rounded-full text-lg mt-4">Passer la commande</button>
+        </div>
+    </main>
+
+    <footer class="bg-gray-100 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2023 Monsieur Thé. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="JS/products.js"></script>
+    <script src="JS/cart.js"></script>
+</body>
+</html>
